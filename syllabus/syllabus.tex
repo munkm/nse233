@@ -1,0 +1,366 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[inner=1in,outer=1in,top=1in,bottom=1in]{geometry}
+\pagestyle{empty}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage{amsmath, amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\CourseTitle} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\CourseSemester \CourseYear} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+\usepackage{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xspace}
+
+\newcommand{\CourseNumber}{NSE 233}
+\newcommand{\CourseTitle}{Mathematical Methods for Nuclear Science and Engineering\xspace}%
+\newcommand{\CourseInstructor}{Dr. Madicken Munk\xspace}%
+\newcommand{\CourseSemester}{Spring\xspace}%
+\newcommand{\CourseYear}{2025\xspace}%
+\newcommand{\CourseDays}{M\xspace}%
+\newcommand{\CourseStart}{11:00\xspace}%
+\newcommand{\CourseEnd}{11:50\xspace}%
+\newcommand{\CourseInstructorEmail}{madicken.munk@oregonstate.edu}
+\newcommand{\CourseRoom}{122\xspace}%
+\newcommand{\CourseBuilding}{Crop Science Building\xspace}%
+\newcommand{\CourseZoom}{}%
+\newcommand{\CourseUniversity}{Oregon State University\xspace}%
+\newcommand{\TeachingAssistant}{Eric Hudec\xspace}%
+\newcommand{\TAOfficeHourDays}{Date Unknown \xspace}%
+\newcommand{\TAOfficeHourStart}{TBA\xspace}%
+\newcommand{\TAOfficeHourEnd}{TBA\xspace}%
+\newcommand{\TAOfficeHourPlace}{220 Merryfield Hall\xspace}
+\newcommand{\MunkOfficeHourDays}{Mondays\xspace}%
+\newcommand{\MunkOfficeHourStart}{9:00 a.m.\xspace}%
+\newcommand{\MunkOfficeHourEnd}{9:50 a.m.\xspace}%
+\newcommand{\MunkOfficeHourPlace}{OSU Radiation Center Library\xspace}
+%\newcommand{\Course<++>}{<++>}
+%\newcommand{\Course<++>}{<++>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\CourseNumber: \CourseTitle\\}
+\author{\CourseUniversity}
+\date{\CourseSemester \CourseYear}
+\begin{document}
+\maketitle
+%\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{rXrX}
+\hline
+\textbf{Instructor:} & \CourseInstructor & \textbf{Email:} & \href{mailto:\CourseInstructorEmail}{\CourseInstructorEmail} \\
+\textbf{Time:} & \CourseDays \CourseStart -- \CourseEnd & \textbf{Place:} & \CourseRoom \CourseBuilding \\
+\textbf{TA:} & \TeachingAssistant & & \\
+\hline
+\end{tabularx}
+\end{table}
+\end{center}
+
+\paragraph{Course Pages:}
+\begin{enumerate}
+        \item \url{https://canvas.oregonstate.edu/courses/}
+        \item \url{https://github.com/munkm/nse233}
+\end{enumerate}
+
+\paragraph{TA Office Hours:} \TeachingAssistant is the TA for the course and will hold
+office hours in \TAOfficeHourPlace.
+They will hold office hours \TAOfficeHourDays from
+\TAOfficeHourStart to \TAOfficeHourEnd.
+Grade disputes will not be addressed in TA office hours.
+
+\paragraph{Office Hours:} Dr. Munk  will hold office hours 
+on
+\MunkOfficeHourDays from \MunkOfficeHourStart to \MunkOfficeHourEnd in
+\MunkOfficeHourPlace. Supplemental office hours are by appointment only
+and should be requested with at least 24 hours notice.
+Before making an appointment, please try the following options:
+\begin{itemize}
+\item If your colleagues might be helpful, please post your questions in the
+        canvas discussion forum provided for this purpose.
+\item If the TAs might be helpful, please attend their office hours.
+\item Email Dr. Munk. If possible, please phrase your question such that it
+        can be answered `Yes' or `No'.  Questions which require substantial
+        response should be asked during the lecture or office hours.
+\end{itemize}
+
+If none of the above are successful or appropriate, you may email me with a
+selection of times of your availability and we can find a time that is mutually
+agreeable.
+
+\paragraph{Main References:}
+The required text for this course is {}. This textbook is available for free by download through the OSU Library. It is also in the modules section of the course for you to download. 
+
+For assistance in computational aspects of the labs, \cite{scopatz_effective_2015} is available online and in the library as an ebook.
+
+
+\bibliographystyle{unsrt}
+\renewcommand{\refname}{\normalfont\selectfont\normalsize}\vspace{-1cm}
+\bibliography{bibliography}
+
+\paragraph{Course Description:}
+Development and application of analytical and numerical methods with 
+applications to problems in the field of Nuclear Science and Engineering. 
+Major topics will include solution of ODEs and systems of ODEs, root finding techniques and numerical integration and differentiation. Major applications will
+include solution of the Batemann Equations and solution of the diffusion equation. 
+
+\paragraph{Course Learning Objectives:}
+
+This course will introduce students to numerical and analytical solution
+techniques for problems found in nuclear science and engienering. Students
+will demonstrate the ability to: 
+
+\begin{enumerate}
+\item Solve ODEs using analytical techniques
+\item Solve ODEs using numerical techniques
+\item Solve systems of ODEs using numerical techniques
+\item Implement numerical differentiation and integration algorithms
+\item Implement numerical root finding techniques
+\item Implement basic Monte Carlo based algorithms. 
+\item Understand the accuracy of various numerical techniques. 
+\end{enumerate}
+
+\paragraph{Course Topics:}
+\noindent Topics that will be covered in this course include:
+\begin{enumerate}
+\item Review of Python basics,
+\item Interpolation methods, polynomial curve fit, spline curve fit,
+\item Use of the integrating factor, solution of homogenous and inhomogenous ODEs, 
+\item Solution of systems of ODEs,
+\item Linear algebra,
+\item Root finding techniques,
+\item Numerical integration,
+\item Numerical differentiation, and
+\item Introduction to Monte Carlo techniques. 
+\end{enumerate}
+
+\paragraph{Prerequisites:}
+\begin{itemize}
+\item MTH 256 or 256H with a C or better. 
+\end{itemize}
+
+\paragraph{Recommended competency:}
+\begin{itemize}
+\item Computer programming experience. 
+\end{itemize}
+
+\paragraph{Grading Policy:} Grades will be assigned as a weighted sum of the following work:
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{Xr}
+\textbf{Work} & \textbf{Weight}\\
+\hline
+\textbf{Homework} & (70\%) \\
+\textbf{Weekly Quizzes} & (10\%) \\
+\textbf{Final Project} & (20\%) \\
+\hline
+\textbf{Total} & (100\%) \\
+\end{tabularx}
+\end{table}
+
+\paragraph{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+\begin{flushleft}
+Final Project Deadline      \dotfill Sunday, June 08, 11:59pm  \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\paragraph{Class Policies:}
+
+\begin{itemize}
+\item[] \textbf{Integrity:} This is an institution of higher
+learning. You are expected to uphold the principles of academic 
+integrity at our institution and to be honest and ethical with your academic work. 
+Academic dishonesty such as plagiarism, cheating, assisting, tampering, and falsification will not be 
+tolerated. 
+For reference, please note the \href{https://studentlife.oregonstate.edu/studentconduct/academic-misconduct-students}{Student Guide for Academic Misconduct} 
+on OSU's Dean of Students page. 
+
+\item[] \textbf{Attendance:} Regular attendance and full participation in class sessions is expected. 
+
+\item[] \textbf{Electronics:} Active participation is essential and expected. 
+  You are encouraged to follow along with course jupyter notebook content with 
+  your personal laptops during class. Use of cell phones and computers for 
+  engagement with material not relevant to the class is not permitted. 
+
+\item[] \textbf{Collaboration:} Collaboratively reviewing course materials and
+  working fellow students can be enriching.  This is
+  recommended.  However, unless otherwise instructed, homework assignments, quizzes, and the final project are
+  to be completed independently and 
+  the result of one's own independent work. Dr. Munk recommends working through
+  the homework problems independently and then checking work with peers. Explaining your
+  process is a good exercise to retain course material.
+
+\item[] \textbf{Late Work:} Late work will not be accepted. However, we will drop your lowest scoring homework and quiz from your grade. 
+This shall accomodate unforseen circumstances that may contribute to a missed quiz or homework assignment.
+
+\item[] \textbf{Make-up Work:} There will be no negotiation about late work
+        except in the case of absence documented by an 
+\href{https://studentlife.oregonstate.edu/emergency-notifications}{emergency notification} from the Dean of Students.
+        Dean of Students. Please note that such a letter is appropriate for many
+        types of conflicts. 
+
+\item[] \textbf{Grade Disputes:} It is important that you understand and agree
+        with the grade you receive on your reports. If you would like
+        to dispute your score, you must send an explanation by email to Dr.
+        Munk within one week of recieving the grade.
+        \textbf{Do not expect us to regrade anything while in conversation with
+        you} as that would not be fair to the other students in the class, whose
+        homeworks were graded without them present.  If you request a regrade,
+        be aware that the it is possible that your score will go down.
+        Regrade requests should be based on an error on our part (e.g., adding
+        up the points incorrectly) or what you suspect is a misunderstanding of
+        your work (e.g., arriving at the correct answer using an unexpected
+        technique). Regrade requests that argue with the rubric (e.g., ``this is
+        wrong, but you took too many points off'') will be returned without
+        consideration.
+        \textbf{Your work should stand alone.} If an assignment is disorganized or
+        ambiguous, and requires an extensive explanation to the TA, you
+        will likely still lose points. The labs not only evaluate your
+        understanding of the material - they also evaluate your ability to
+        communicate that understanding clearly.
+\end{itemize}
+
+\paragraph{University-Wide Course Statements:}
+
+\begin{itemize}
+\item[] \textbf{Academic Calendar:} All students are subject to the 
+registration and refund deadlines as stated in the 
+\href{https://registrar.oregonstate.edu/osu-academic-calendar}{Academic Calendar}
+
+\item[] \textbf{Statement Regarding Students with Disabilities:} 
+Accommodations for students with disabilities are determined and approved 
+by Disability Access Services (DAS). If you, as a student, believe you are 
+eligible for accommodations but have not obtained approval please contact 
+DAS immediately at 541-737-4098 or at \url{http://ds.oregonstate.edu/}. 
+DAS notifies students and faculty members of approved academic accommodations 
+and coordinates implementation of those accommodations. While not required, 
+students and faculty members are encouraged to discuss details of the 
+implementation of individual accommodations.
+
+\item[] \textbf{Student Conduct Expectations Link:} 
+\url{https://beav.es/codeofconduct}
+
+\item[] \textbf{Student Bill of Rights:} 
+OSU has 
+\href{https://asosu.oregonstate.edu/advocacy/rights}{twelve established student rights}. 
+They include due process in all 
+university disciplinary processes, an equal opportunity to learn, and grading 
+in accordance with the course syllabus. 
+
+\item[] \textbf{Reach out for Success:} 
+University students encounter setbacks from time to time. If you encounter
+ difficulties and need assistance, it’s important to reach out. Consider 
+discussing the situation with an instructor or academic advisor. Learn about 
+resources that assist with wellness and academic success at
+\url{https://oregonstate.edu/ReachOut}. 
+If you are in immediate crisis, please contact the Crisis Text Line by texting 
+OREGON to 741-741 or call the National Suicide Prevention Lifeline at 
+1-800-273-TALK (8255). 
+\end{itemize}
+
+
+\paragraph{Accessibility:} I hope that this course will be inclusive and
+accommodating for all learners. If you have worked with DAS to obtain 
+accomodations, please reach out so we can work together to ensure you 
+are appropriately accomodated. 
+
+\paragraph{Safety:}
+Emergencies can happen anywhere and at any time, so it’s important that we take
+a minute to prepare for a situation in which our safety could depend on our
+ability to react quickly. Take a moment to learn the different ways to leave
+this building. If there's ever a fire alarm or something like that, you’ll know
+how to get out and you'll be able to help others get out. Next, figure out the
+best place to go in case of severe weather - we'll need to go to a low-level in
+the middle of the building, away from windows. And finally, if there's ever
+someone trying to hurt us, our best option is to run out of the building. If we
+cannot do that safely, we'll want to hide somewhere we can't be seen, and we'll
+have to lock or barricade the door if possible and be as quiet as we can. 
+If we can't run or hide, we'll fight back with whatever we can
+get our hands on. 
+Remember you can sign up for
+emergency text messages at \url{https://emergency.oregonstate.edu/emergency-management/osu-alerts}. This
+\href{https://emergency.oregonstate.edu/emergency-preparedness/emergency-procedures/run-hide-fight-info}{Run Hide Fight Info page}
+discusses the OSU's Run-Hide-Fight strategy.
+
+
+\paragraph{Other Resources:}
+University students typically experience a wide range of stressors during their
+time on campus. Accordingly, campus resources exist to help students manage
+stress levels, mental health, physical health, and emergencies while navigating
+this environment. I hope you will take advantage of these campus resources.
+
+\begin{itemize}
+\item \href{https://recsports.oregonstate.edu/}{Campus Recreational Sports}
+\item \href{https://counseling.oregonstate.edu/}{Counselling and Psychological Services}
+\item \href{https://studenthealth.oregonstate.edu/}{Student Health Services}
+\item \href{https://studentlife.oregonstate.edu/bnc}{The Basic Needs Center}
+\end{itemize}
+
+\pagebreak
+\FloatBarrier
+\renewcommand{\arraystretch}{1}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{lllcccccc}
+\multicolumn{8}{c}{\textbf{Course Schedule:}\textit{ Note that this schedule is
+subject to change.}}\\
+&&&&&&&&\\
+\textbf{Date} & \textbf{Week} & \textbf{Day} & \textbf{Unit} & \textbf{Quiz} & \textbf{Quiz}& \textbf{Homework} & \textbf{Homework}\\
+              &  &  &  & \textbf{Given}  & \textbf{Due\footnotemark[1]}  & \textbf{Given} & \textbf{Due\footnotemark[2]}\\ \hline
+\hline
+3/31 & 1 & M & Intro/Syllabus                     & 1 &   &   &  \\
+4/2  & 1 & W & Python Review                      &   &   & 1 &  \\
+4/4  & 1 & F & --No Class--                       &   &   &   &  \\
+4/7  & 2 & M & Data Structures and Precision      & 2 & 1 &   &  \\
+4/9  & 2 & W & Functions                          &   &   & 2 & 1 \\
+4/11 & 2 & F & Recursion and Modules              &   &   &   &  \\
+4/14 & 3 & M & Numpy and Array Operations         & 3 & 2 &   &  \\
+4/16 & 3 & W & Matplotlib and Plotting            &   &   &   &  \\
+4/18 & 3 & F & Dictionaries, Testing              &   &   &   &  \\
+4/21 & 4 & M & Gaussian Elimination               & 4 & 3 & 3 & 2\\
+4/23 & 4 & W & LU Factorization                   &   &   &   &  \\
+4/25 & 4 & F & Iterative Methods                  &   &   &   &  \\
+4/28 & 5 & M & --No Class--                       & 5 & 4 &   &  \\
+4/30 & 5 & W & Interpolation                      &   &   & 4 & 3\\
+5/2  & 5 & F & Interpolation                      &   &   &   &  \\
+5/5  & 6 & M & Curve Fitting                      & 6 & 5 &   &  \\
+5/7  & 6 & W &        Root Finding Methods        &   &   &   &  \\
+5/9  & 6 & F & Root Finding Methods               &   &   & 5 & 4\\
+5/12 & 7 & M & Root Finding Methods               & 7 & 6 &   &  \\
+5/14 & 7 & W & Finite Different Approximations    &   &   &   &  \\
+5/16 & 7 & F & Numerical Integration              &   &   &   &  \\
+5/19 & 8 & M & Initial Value Problems             & 8 & 7 & 6 & 5\\
+5/21 & 8 & W & Systems of ODEs                    &   &   &   &  \\
+5/23 & 8 & F & Point Reactor Kinetics             &   &   &   &  \\
+5/26 & 9 & M & Intro to Monte Carlo Methods       & 9 & 8 &   &  \\
+5/28 & 9 & W & Tracking and Sampling              &   &   & 7 & 6\\
+5/30 & 9 & F & Variance Reduction                 &   &   &   &  \\
+6/2  & 10 & M & Variance Reduction                &   & 9 &   &  \\
+6/4  & 10 & W & Buffer                            &   &   &   &  \\
+6/6  & 10 & F & Buffer                            &   &   &   & 7\\
+\end{tabular}
+\end{center}
+\end{table}
+\FloatBarrier
+
+
+\footnotetext[1]{Quizzes will be due at 11am the day the quiz is due.}
+\footnotetext[2]{Homework is due at 11:59 PM pacific the the date it is due.}
+%%%%%% THE END
+\end{document}
