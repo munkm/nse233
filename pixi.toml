@@ -1,0 +1,19 @@
+[workspace]
+authors = ["Madicken Munk"]
+channels = ["conda-forge"]
+name = "nse233"
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+version = "0.1.0"
+
+[tasks.jupyter-lab]
+description = "Launch Jupyter Lab in the lectures directory"
+cmd = "jupyter lab lectures"
+
+[tasks.start]
+description = "Get started"
+depends-on = ["jupyter-lab"]
+
+[dependencies]
+matplotlib = ">=3.10.8,<4"
+notebook = ">=7.4.7,<8"
+jupyterlab = ">=4.4.10,<5"

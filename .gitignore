@@ -261,3 +261,7 @@ roster.csv
 # jupyter stuff
 .DS_STORE
 */.ipynb_checkpoints
+
+# pixi environments
+.pixi
+*.egg-info
